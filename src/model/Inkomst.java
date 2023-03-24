@@ -1,3 +1,5 @@
+package model;
+
 public class Inkomst {
 
     private String type;

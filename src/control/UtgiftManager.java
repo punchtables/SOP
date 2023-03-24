@@ -1,4 +1,7 @@
+package control;
+
 import java.util.ArrayList;
+import model.*;
 
 public class UtgiftManager {
 
@@ -18,10 +21,22 @@ public class UtgiftManager {
     public String[] getInfoString(){
         String[] infoString = new String[list.size()];
 
-        for(int i = 0; i<list.size();){
-            infoString[i] = list.get(i).toString();
+        for(int i = 0; i<list.size();i++){
+            infoString[i] = i + ". " + list.get(i).toString();
         }
         return infoString;
+    }
+
+    public int getTotal(){
+        int total = 0;
+        for(int i = 0; i < list.size();i++){
+            total = total + list.get(i).getPrice();
+        }
+        return total;
+    }
+
+    public ArrayList<Utgift> getList(){
+        return list;
     }
 
 }

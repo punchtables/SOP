@@ -1,3 +1,5 @@
+package model;
+
 public class Utgift {
 
     private String name;
